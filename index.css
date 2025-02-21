@@ -1,0 +1,192 @@
+/* Background */
+body {
+  background-image: url('2026-Aston-Martin-Vantage-Roadster-005-1080.jpg');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Search Button */
+.search-button {
+  position: fixed;
+  top: 12px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 30%;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000; /* Keep it in front */
+}
+
+.search-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+.search-button:active {
+  transform: scale(0.95);
+}
+
+/* Search Bar */
+.search-container {
+  position: fixed;
+  top: 15px;
+  left: 70px;
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.0); /* Black background */
+  display: flex;
+  align-items: center;
+  z-index: 1000; /* Ensure it stays in front */
+}
+
+.search-container input {
+  padding: 5px;
+  width: 200px;
+  font-size: 16px;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.11);
+  color: white;
+  outline: none;
+}
+
+.search-container button {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 5px 10px;
+  margin-left: 2px; /* Adds space between input and button */
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-container button:hover {
+  background: darkred;
+  transform: scale(1.1);
+}
+
+/* Open/Close All Buttons */
+.toggle-buttons {
+  position: fixed;
+  top: 10px;   /* Move buttons to the top */
+  right: 10px; /* Move buttons to the right */
+  display: flex;
+  gap: 10px;
+  z-index: 1000; /* Keep it in front */
+}
+
+.toggle-buttons button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.toggle-buttons button:hover {
+  background-color: #666;
+  transform: scale(1.1);
+}
+
+.toggle-buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Growth effect for labels */
+label {
+  transition: transform 0.2s ease-in-out;
+}
+
+label:hover {
+  transform: scale(1.1);
+}
+
+label:active {
+  transform: scale(0.95);
+}
+
+/* Hide movies that don’t match search */
+.hidden {
+  display: none;
+}
+
+/* Movie Title */
+.title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Movie Sections */
+.m-25,
+.m-24,
+.m-23,
+.m-22 {
+  border: 1px solid transparent;
+}
+
+.m-25 input,
+.m-24 input,
+.m-23 input,
+.m-22 input {
+  display: none;
+}
+
+.m-25 label,
+.m-24 label,
+.m-23 label,
+.m-22 label {
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.11);
+  display: block;
+  cursor: pointer;
+  padding: 10px 10px 10px 30px;
+  position: relative;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.m-25 label:hover,
+.m-24 label:hover,
+.m-23 label:hover,
+.m-22 label:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.m-25 div,
+.m-24 div,
+.m-23 div,
+.m-22 div {
+  font-size: 25px;
+  height: 0;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.3s, height 0.3s ease;
+}
+
+.m-25 input:checked ~ div,
+.m-24 input:checked ~ div,
+.m-23 input:checked ~ div,
+.m-22 input:checked ~ div {
+  padding: 10px;
+  opacity: 1;
+  height: auto;
+}
+
+/* To avoid text selection interference */
+label {
+  user-select: auto;
+}
