@@ -2,6 +2,9 @@
 body {
   background-image: url('2026-Aston-Martin-Vantage-Roadster-005-1080.jpg');
   background-size: cover;
+  background-attachment: fixed; /* Keeps the background in place */
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
 }
 
